@@ -1,0 +1,1384 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+::placeholder
+	color: #000000
+::selection
+	background-color: $red
+	color: #fff
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+ul
+	margin: 0
+	padding: 0
+.header_top_line
+	background-color: #2E2E2E
+	height: 40px
+	line-height: 35px
+	.header_top_line_phone
+		a
+			text-decoration: none
+			padding: 0 0 0 18px
+			&::before
+				content: ''
+				display: block
+				width: 15px
+				height: 15px
+				background-image: url('../img/1_header_top_line/phone.svg')
+				background-repeat: no-repeat
+				background-size: contain
+				position: absolute
+				left: -10px
+				top: 8px
+			&::after
+				content: ''
+				height: 20px
+				width: 1px
+				background-color: #ffffff
+				position: absolute
+				display: block
+				top: 7px
+				right: -32px
+	.header_top_line_mail
+		a
+			padding: 0 0 0 30px
+			&::before
+				content: ''
+				display: block
+				width: 15px
+				height: 15px
+				background-image: url('../img/1_header_top_line/mail.svg')
+				background-repeat: no-repeat
+				background-size: contain
+				position: absolute
+				left: 5px
+				top: 10px
+	.header_top_line_private_room
+		a
+			padding: 0 0 0 35px
+			&::before
+				content: ''
+				display: block
+				width: 15px
+				height: 15px
+				background-image: url('../img/1_header_top_line/user.svg')
+				background-repeat: no-repeat
+				background-size: contain
+				position: absolute
+				left: 5px
+				top: 10px
+	.header_top_line_blocks
+		a
+			color: #ffffff
+			font-family: $helveticaLight
+			font-size: 14px
+			position: relative
+			display: inline-block
+.header_middle_line
+	min-height: 200px
+	background-color: #F2F2F2
+	padding: 20px 0 0 0
+	.search
+		input[type="text"]
+			width: 100%
+			display: inline-block
+			height: 50px
+			box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25)
+			border: 1px solid #CCD2D4
+			padding: 0 0 0 20px
+			border-radius: 3px
+			font-family: $helveticaLight
+			font-size: 14px
+		input[type="submit"]
+			width: 50px
+			height: 50px
+			position: absolute
+			top: 0
+			right: 15px
+			border: none
+			background-color: transparent
+			background-image: url('../img/2_header_middle_line/search.svg')
+			background-repeat: no-repeat
+			background-position: center center
+			cursor: pointer
+	.header_middle_line_feedback
+		a
+			display: block
+			height: 50px
+			background-color: $red
+			border-radius: 3px
+			text-transform: uppercase
+			text-align: center
+			line-height: 50px
+			box-shadow: 0px 5px 10px rgba(174, 39, 50, 0.2)
+			font-family: $helveticaBold
+			font-size: 13px
+			color: #fff
+			letter-spacing: 0.1em
+	.menu
+		margin: 27px 0 0 0
+		ul
+			list-style: none
+			li
+				display: inline-block
+				width: 218px
+				height: 50px
+				border: 1px solid #E1E1E1
+				transition: all 0.25s linear
+				box-sizing: border-box
+				border-radius: 3px
+				a
+					display: block
+					text-transform: uppercase
+					color: $black
+					font-size: 13px
+					font-family: $helveticaRoman
+					text-align: center
+					text-decoration: none
+					height: 100%
+					border-radius: 3px
+					line-height: 45px
+					background-color: #fff
+					letter-spacing: 0.05em
+					position: relative
+					&::before
+						content: ''
+						display: block
+						position: absolute
+						background-color: transparent
+						width: 100%
+						height: 100%
+						border: 3px solid transparent
+						opacity: 0
+						transition: all 0.25s linear
+						border-radius: 3px
+					&:hover
+						color: $red
+						&::before
+							border: 3px solid $red
+							opacity: 1
+				.active_link
+					background-color: $red
+					color: #fff
+					&:hover
+						color: #ffffff
+		.middle-autorization
+			margin: 20px 0 0 0
+			a
+				display: block
+				height: 50px
+				background-color: #ee414f
+				border-radius: 3px
+				text-transform: uppercase
+				text-align: center
+				line-height: 50px
+				box-shadow: 0 5px 10px rgba(174,39,50,.2)
+				font-family: HelveticaNeueCyrBold
+				font-size: 13px
+				color: #fff
+				letter-spacing: .1em	
+.portal_slider
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url('../img/3_portal_slider/round_bottom.svg')
+		bottom: -10px
+		left: 51%
+		z-index: 1
+	.item_slide
+		min-height: 586px
+		background-position: center
+		background-size: cover
+	.wrapper_text_blocks
+		position: absolute
+		top: 0
+		z-index: 10
+		width: 100%
+		padding: 50px 0 0 0
+		.left_block_text
+			background: $red
+			padding: 50px 20px
+			line-height: 21px
+			opacity: 0
+			visibility: hidden
+			transition: visibility 0.5s, opacity 0.5s linear
+			p
+				font-size: 13px
+				color: #ffffff
+				font-family: $helveticaLight
+				letter-spacing: 0.05em
+			span
+				font-size: 14px
+				font-family: $helveticaBold
+				color: #ffffff
+		.right_block_text
+			background: $red
+			padding: 50px 20px
+			line-height: 21px
+			opacity: 0
+			visibility: hidden
+			transition: visibility 0.5s, opacity 0.5s linear
+			p
+				font-size: 13px
+				color: #ffffff
+				font-family: $helveticaLight
+				letter-spacing: 0.05em
+			span
+				font-size: 14px
+				font-family: $helveticaBold
+				color: #ffffff
+		.wrapper_left_open_button
+			text-align: left
+			.left_open_button
+				text-align: left
+		.wrapper_right_open_button
+			text-align: right
+			.right_open_button
+				text-align: left
+				
+		.open_button
+			display: inline-block
+			height: 50px
+			line-height: 45px
+			background-color: $red
+			width: 185px
+			border-top-left-radius: 3px
+			border-top-right-radius: 3px
+			text-transform: uppercase
+			font-family: $helveticaBold
+			font-size: 14px
+			text-decoration: none
+			color: #fff
+			letter-spacing: 0.05em
+			padding: 0 0 0 25px
+			position: relative
+			&::after
+				content: ''
+				width: 13px
+				height: 7px
+				position: absolute
+				display: block
+				background-image: url('../img/3_portal_slider/arrow_button.svg')
+				background-repeat: no-repeat
+				background-size: contain
+				top: 20px
+				right: 30px
+				cursor: pointer
+		.center_block_text
+			h1
+				font-family: $helveticaBold
+				font-size: 22px
+				text-align: center
+				text-transform: uppercase
+			p
+				font-size: 14px
+				text-align: center
+				letter-spacing: 0.05em
+				font-family: $helveticaLight
+		.right_block_registration
+			background-color: #fff
+			box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+			padding: 40px 30px 32px 30px
+			position: relative
+			opacity: 0
+			visibility: hidden
+			transition: visibility 0.5s, opacity 0.5s linear
+			position: absolute
+			width: 343px
+			top: 50px
+			&::before
+				content: ''
+				width: 100%
+				height: 10px
+				display: block
+				position: absolute
+				top: -10px
+				background-color: $red
+				left: 0
+			h2
+				font-family: $helveticaBold
+				text-align: left
+				text-transform: uppercase
+				font-size: 25px
+				position: relative
+				&::before
+					content: ''
+					display: block
+					width: 100%
+					height: 1px
+					background-color: #000000
+					opacity: 0.2
+					position: absolute
+					bottom: -20px
+			form
+				input
+					display: block
+					height: 50px
+					width: 100%
+				input[type="text"]
+					background-color: #fff
+					border: 1px solid #CCD2D4
+					box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25)
+					border-radius: 3px
+					padding: 0 10px 0 35px
+					font-family: $helveticaLight
+					position: relative
+					font-size: 14px
+					letter-spacing: 0.05em
+					&:nth-child(1)
+						margin: 50px 0 0 0
+						background-image: url('../img/3_portal_slider/mail.svg')
+						background-repeat: no-repeat
+						background-position: 10px 17px
+					&:nth-child(2)
+						margin: 20px 0 0 0
+						background-image: url('../img/3_portal_slider/password.svg')
+						background-repeat: no-repeat
+						background-position: 10px 17px
+				input[type="submit"]
+					margin: 30px 0 0 0
+					box-shadow: 0px 5px 10px rgba(174, 39, 50, 0.2)
+					border: none
+					border-radius: 3px
+					background-color: $red
+					color: #ffffff
+					text-transform: uppercase
+					font-family: $helveticaBold
+					font-size: 13px
+					cursor: pointer
+					box-shadow: 0px 5px 10px rgba(174, 39, 50, 0.2)
+			.wrapper_right_block_bottom
+				margin: 30px 0 0 0
+				padding: 20px 0 0 0
+				position: relative
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				&::before
+					content: ''
+					display: block
+					width: 100%
+					height: 1px
+					background-color: #000000
+					opacity: 0.2
+					position: absolute
+					top: 0
+				.no_account,
+				.forget_password
+					display: inline-block
+					position: relative
+				.no_account
+					&::before
+						content: ''
+						display: block
+						height: 40px
+						width: 1px
+						right: -15px
+						position: absolute
+						background-color: #000000
+						opacity: 0.2
+						
+				p,
+				a
+					font-family: $helveticaLight
+					font-size: 14px
+					letter-spacing: 0.05em
+					margin: 0
+					line-height: 21px
+				a
+					color: $red
+					text-decoration: underline
+		.left_block_registration
+			background-color: #fff
+			box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+			padding: 40px 30px 32px 30px
+			position: relative
+			opacity: 0
+			visibility: hidden
+			transition: visibility 0.5s, opacity 0.5s linear
+			position: absolute
+			width: 343px
+			top: 50px
+			&::before
+				content: ''
+				width: 100%
+				height: 10px
+				display: block
+				position: absolute
+				top: -10px
+				background-color: $red
+				left: 0
+			h2
+				font-family: $helveticaBold
+				text-align: left
+				text-transform: uppercase
+				font-size: 25px
+				position: relative
+				&::before
+					content: ''
+					display: block
+					width: 100%
+					height: 1px
+					background-color: #000000
+					opacity: 0.2
+					position: absolute
+					bottom: -20px
+			form
+				input
+					display: block
+					height: 50px
+					width: 100%
+				input[type="text"]
+					background-color: #fff
+					border: 1px solid #CCD2D4
+					box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25)
+					border-radius: 3px
+					padding: 0 10px 0 35px
+					font-family: $helveticaLight
+					position: relative
+					font-size: 14px
+					letter-spacing: 0.05em
+					&:nth-child(1)
+						margin: 50px 0 0 0
+						background-image: url('../img/3_portal_slider/mail.svg')
+						background-repeat: no-repeat
+						background-position: 10px 17px
+					&:nth-child(2)
+						margin: 20px 0 0 0
+						background-image: url('../img/3_portal_slider/password.svg')
+						background-repeat: no-repeat
+						background-position: 10px 17px
+				input[type="submit"]
+					margin: 30px 0 0 0
+					box-shadow: 0px 5px 10px rgba(174, 39, 50, 0.2)
+					border: none
+					border-radius: 3px
+					background-color: $red
+					color: #ffffff
+					text-transform: uppercase
+					font-family: $helveticaBold
+					font-size: 13px
+					cursor: pointer
+					box-shadow: 0px 5px 10px rgba(174, 39, 50, 0.2)
+			.wrapper_left_block_bottom
+				margin: 30px 0 0 0
+				padding: 20px 0 0 0
+				position: relative
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				&::before
+					content: ''
+					display: block
+					width: 100%
+					height: 1px
+					background-color: #000000
+					opacity: 0.2
+					position: absolute
+					top: 0
+				.no_account,
+				.forget_password
+					display: inline-block
+					position: relative
+				.no_account
+					&::before
+						content: ''
+						display: block
+						height: 40px
+						width: 1px
+						right: -15px
+						position: absolute
+						background-color: #000000
+						opacity: 0.2
+						
+				p,
+				a
+					font-family: $helveticaLight
+					font-size: 14px
+					letter-spacing: 0.05em
+					margin: 0
+					line-height: 21px
+				a
+					color: $red
+					text-decoration: underline
+		.active_block
+			opacity: 1
+			visibility: visible
+			transition: visibility 0.5s, opacity 0.5s linear
+.icons_about_us
+	min-height: 700px
+	padding: 50px 0
+	position: relative
+	background: linear-gradient(0deg, rgba(233, 236, 244, 0) -33.46%, #E9ECF4 79.19%)
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url(../img/3_portal_slider/round_bottom.svg)
+		bottom: -10px
+		left: 51%
+		z-index: 1
+	.wrapper_item
+		&:hover
+			.border_hover
+				width: 100%
+				height: 100%
+				opacity: 1
+		.wrapper_icons_about_us
+			text-align: center
+			background-repeat: no-repeat
+			background-position: center 52px
+			padding: 0 0 30px 0
+			position: relative
+			z-index: 9
+			.wrapper_header_icons
+				box-shadow: 0px 5px 5px rgba(0, 59, 107, 0.15)
+				height: 41px
+				background-color: #fff
+				display: inline-block
+				margin: 100px 0 0 0
+				padding: 12px 30px
+				border-radius: 3px
+				transition: all 0.5s linear
+				&:hover
+					background-color: #ee414f
+					a
+						color: #fff
+			a
+				color: #525252
+				font-family: $gilroyBold
+				font-size: 18px
+				text-transform: uppercase
+				text-align: center
+				letter-spacing: 0.05em
+				position: relative
+				z-index: 9
+				
+			p
+				line-height: 24px
+				color: #000000
+				font-family: $helveticaLight
+				font-size: 16px
+				letter-spacing: 0.05em
+				margin: 30px 0 0 0
+		.hospital
+			background-image: url('../img/4_icons_about_us/hospital.svg')
+		.consent
+			background-image: url('../img/4_icons_about_us/consent.svg')
+		.files
+			background-image: url('../img/4_icons_about_us/files.svg')
+		.doctors
+			background-image: url('../img/4_icons_about_us/doctors.svg')
+		.desk
+			background-image: url('../img/4_icons_about_us/desk.svg')
+		.hello
+			background-image: url('../img/4_icons_about_us/hello.svg')
+		.border_icons
+			height: 16px
+			width: 16px
+			opacity: 0.2
+			position: absolute
+		.top_left
+			border-left: 1px solid black
+			border-top: 1px solid black
+			top: 0
+			left: 0
+		.top_right
+			border-right: 1px solid black
+			border-top: 1px solid black
+			top: 0
+			right: 0
+		.bottom_left
+			border-left: 1px solid black
+			border-bottom: 1px solid black
+			bottom: 0
+			left: 0
+		.bottom_right
+			border-right: 1px solid black
+			border-bottom: 1px solid black
+			bottom: 0
+			right: 0
+		.border_hover
+			position: absolute
+			width: 0%
+			height: 0%
+			top: 0
+			left: 0
+			border: 1px solid #ee414f
+			transition: all .5s linear
+			opacity: 0
+			z-index: 1
+.why_use_portal_easy
+	height: 1000px
+	background-color: #E9ECF4
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url(../img/3_portal_slider/round_bottom.svg)
+		bottom: -10px
+		left: 51%
+		z-index: 1
+	h2
+		text-transform: uppercase
+		font-family: $helveticaBold
+		font-size: 30px
+		text-align: center
+		margin: 75px 0 0 0
+.wrapper_tabs
+	margin: 20px 0 0 0
+	.tabs
+		position: relative
+		z-index: 8
+		.tab
+			display: inline-block
+			width: 33%
+			background-color: #f2f4f8
+			height: 50px
+			font-family: $helveticaBold
+			text-align: center
+			border-radius: 3px
+			position: relative
+			color: #000000
+			text-transform: uppercase
+			line-height: 50px
+			font-size: 12px
+			cursor: pointer
+			transition: all 0.25s linear
+		.active
+			background-color: $red
+			color: #ffffff
+			transform: scaleY(1.2)
+	.tab_content
+		position: relative
+		z-index: 9
+		.tab_item
+			background: linear-gradient(180deg, #FFFFFF 29.53%, rgba(255, 255, 255, 0) 92.48%)
+			padding: 50px 0 0 0
+			text-align: center
+			height: 800px
+			&:nth-child(1)
+				background-image: url('../img/5_why_use_portal_easy/first_tab/rounds.png');
+				background-repeat: no-repeat
+				background-position: center 70px
+				.img_wrapper
+					margin: 40px 0 0 25px
+					position: relative
+					img
+						position: relative
+						z-index: 10
+					.dashed
+						position: absolute
+						top: -15px
+						left: 50%
+						margin: 0 0 0 -354px
+						z-index: 9
+						animation: first_tab  3s infinite linear
+			&:nth-child(2)
+				background-image: url('../img/5_why_use_portal_easy/second_tab/rounds.png');
+				background-repeat: no-repeat
+				background-position: center 70px
+				.img_wrapper
+					margin: 60px 0 0 0
+					position: relative
+					img
+						position: relative
+						z-index: 10
+					.dashed
+						position: absolute
+						left: 50%
+						margin: 0 0 0 -242px
+						top: 23px
+						z-index: 9
+						animation: second_tab  20s infinite linear
+			&:nth-child(3)
+				background-image: url('../img/5_why_use_portal_easy/three_tab/round.png')
+				background-repeat: no-repeat
+				background-position: center 70px
+				.img_wrapper
+					height: 500px
+					.pulser
+						width: 30px
+						height: 30px
+						background: transparent
+						position: absolute
+						left: 50%
+						margin: 0 0 0 -15px
+						top: 66%
+						border-radius: 50%
+						animation: three_tab 3s infinite linear
+						
+			p
+				text-align: center
+				font-family: $helveticaLight
+				letter-spacing: 0.05em
+				font-size: 15px
+				max-width: 692px
+				display: inline-block
+.video_guide
+	min-height: 665px
+	background-image: url('../img/6_video_guide/background.png')
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url(../img/3_portal_slider/round_bottom.svg)
+		bottom: 30px
+		left: 51%
+		z-index: 1
+	h2
+		text-transform: uppercase
+		font-family: HelveticaNeueCyrBold
+		font-size: 30px
+		text-align: center
+		margin: 75px 0 0 0
+	img
+		display: block
+		margin: 30px auto
+.portal_priorities
+	min-height: 430px
+	position: relative
+	h2
+		text-transform: uppercase
+		font-family: HelveticaNeueCyrBold
+		font-size: 30px
+		text-align: center
+	.wrapper_priorities_slider
+		margin: 30px 0 0 0
+		position: relative
+		.left_side
+			max-width: 540px
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			background-color: #fff
+			opacity: 0.8
+		.slide_item
+			position: relative
+			img
+				width: 100%
+				min-height: 430px
+			.table_slide
+				position: absolute
+				top: 20%
+				z-index: 10
+				width: 100%
+				left: 0
+				.text_block
+					max-widht: 425px
+					min-height: 250px
+					background-color: #fff
+					box-shadow: 0px 5px 5px rgba(0, 59, 107, 0.15)
+					border-radius: 5px
+					padding: 40px
+					font-family: $helveticaMedium
+					color: #000000
+					font-size: 20px
+					letter-spacing: 0.05em
+					line-height: 26px
+					a
+						height: 50px
+						width: 170px
+						background: $red
+						display: block
+						color: #ffffff
+						text-align: center
+						line-height: 45px
+						border-radius: 3px
+						box-shadow: 0px 5px 10px rgba(174, 39, 50, 0.2)
+						text-transform: uppercase
+						font-family: $helveticaBold
+						font-size: 13px
+						margin: 30px 0 0 0
+	.dots
+		position: absolute
+		bottom: 70px
+		z-index: 999
+		width: 100%
+		.slick-dots
+			text-align: left
+			li
+				button
+					&::before
+						opacity: 1
+						font-size: 10px
+			.slick-active
+				button
+					&::before
+						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+						color: $red
+						font-size: 15px
+						width: 13px
+						height: 13px
+						border-radius: 50%
+	.nextArrow,
+	.prevArrow
+		position: absolute
+		z-index: 9999
+
+	.nextArrow
+		top: 50%
+		right: 10%
+		
+		&:hover
+			&::before
+				opacity: 0
+			&::after
+				opacity: 1
+		&::before
+			content: ''
+			display: block
+			width: 40px
+			height: 40px
+			background-image: url('../img/7_portal_priorities/arrow_next.png')
+			cursor: pointer
+			position: absolute
+			left: 0
+			opacity: 1
+		&::after
+			content: ''
+			display: block
+			width: 40px
+			height: 40px
+			background-image: url('../img/7_portal_priorities/arrow_next_hover.png')
+			cursor: pointer
+			position: absolute
+			left: 0
+			opacity: 0
+
+	.prevArrow
+		top: 50%
+		left: 7%
+		&:hover
+			&::before
+				opacity: 0
+			&::after
+				opacity: 1
+		&::before
+			content: ''
+			display: block
+			width: 40px
+			height: 40px
+			background-image: url('../img/7_portal_priorities/arrow_pre.png')
+			cursor: pointer
+			position: absolute
+			left: 0
+			opacity: 1
+
+		&::after
+			content: ''
+			display: block
+			width: 40px
+			height: 40px
+			opacity: 0
+			background-image: url('../img/7_portal_priorities/arrow_pre_hover.png')
+			cursor: pointer
+			position: absolute
+			left: 0
+.chosen
+	min-height: 450px
+	background: linear-gradient(360deg, rgba(233, 236, 244, 0) -81.45%, #E9ECF4 64.33%)
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url(../img/3_portal_slider/round_bottom.svg)
+		top: 60px
+		left: 51%
+		z-index: 1
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url(../img/3_portal_slider/round_bottom.svg)
+		bottom: -10px
+		left: 51%
+		z-index: 1
+	h2
+		text-transform: uppercase
+		font-family: $helveticaBold
+		font-size: 30px
+		text-align: center
+		margin: 120px 0 0 0
+	.us_chosen
+		margin: 40px 0 0 0
+		.chosen_item
+			position: relative
+			.chosen_title
+				position: absolute
+				height: 50px
+				top: 15px
+				left: 45px
+				background-color: #fff
+				padding: 0 20px
+				line-height: 45px
+				font-family: $gilroyBold
+				color: #525252
+				text-transform: uppercase
+				font-size: 17px
+				box-shadow: 0px 5px 5px rgba(0, 59, 107, 0.15)
+				border-radius: 3px
+				letter-spacing: 0.05em
+				span
+					font-size: 21px
+			.chosen_text
+				margin: 40px 0 0 0
+				font-family: $helveticaLight
+				font-size: 20px
+.bottom_feedback
+	height: 535px
+	background-image: url('../img/9_bottom_feedback/bg.png')
+	h2
+		text-transform: uppercase
+		font-family: $helveticaBold
+		font-size: 30px
+		text-align: center
+		margin: 72px 0 0 0
+	form
+		height: 330px
+		background-color: #fff
+		display: block
+		margin: 30px 0 0 0
+		border-radius: 3px
+		box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1)
+		padding: 40px 80px
+		p
+			font-size: 19px
+			font-family: $helveticaLight
+			text-align: center
+			color: #000000
+			line-height: 30px
+			span
+				font-family: $helveticaBold
+				font-size: 22px
+		input[type="text"]
+			height: 50px
+			display: block
+			max-width: 500px
+			width: 100%
+			margin: 35px auto
+			padding: 0 0 0 60px
+			background-image: url('../img/9_bottom_feedback/phone.svg')
+			background-repeat: no-repeat
+			background-position: 20px 15px
+			font-size: 14px
+			font-family: $helveticaLight
+		input[type="submit"]
+			width: 170px
+			height: 50px
+			background-color: $red
+			font-family: $helveticaBold
+			text-transform: uppercase
+			font-size: 13px
+			margin: 40px auto
+			box-shadow: 0px 5px 10px rgba(174, 39, 50, 0.2)
+			border-radius: 3px
+			color: #ffffff
+			letter-spacing: 0.05em
+			border: 0
+			display: block
+			cursor: pointer
+footer
+	min-height: 385px
+	background-color: #003560
+	padding: 65px 0 40px 0
+	h3
+		font-size: 16px
+		text-transform: uppercase
+		letter-spacing: 0.05em
+		font-family: $helveticaBold
+		color: #ffffff
+	ul
+		list-style: none
+		li
+			margin: 10px 0
+			a
+				color: #ffffff
+				font-size: 13px
+				letter-spacing: 0.05em
+				text-decoration: underline
+				font-family: $helveticaLight
+				&:hover
+					color: #ffffff
+					text-decoration: none
+	.social_links
+		ul
+			li
+				display: inline-block
+				a
+					display: inline-block
+					width: 40px
+					height: 40px
+					border: 1px solid #3072A7
+					border-radius: 3px
+					margin: 0 27px 0 0
+					text-align: center
+					position: relative
+					transition: all 0.25s linear
+					&:hover
+						border: 1px solid transparent
+						background-color: $red
+						&::before
+							opacity: 0
+						&::after
+							opacity: 1
+					&::before
+						opacity: 1
+						position: absolute
+						transition: all 0.25s linear
+					&::after
+						opacity: 0
+						position: absolute
+						transition: all 0.25s linear
+				&:nth-child(1)
+					a
+						&::before
+							content: ''
+							display: block
+							width: 20px
+							height: 20px
+							background-image: url('../img/10_footer/fb.svg')
+							margin: 10px
+						&::after
+							content: ''
+							display: block
+							width: 20px
+							height: 20px
+							background-image: url('../img/10_footer/fb_hover.svg')
+							margin: 10px
+				&:nth-child(2)
+					a
+						&::before
+							content: ''
+							display: block
+							width: 26px
+							height: 26px
+							background-image: url('../img/10_footer/vk.svg')
+							margin: 6px
+						&::after
+							content: ''
+							display: block
+							width: 26px
+							height: 26px
+							background-image: url('../img/10_footer/vk_hover.svg')
+							margin: 6px
+				&:nth-child(3)
+					a
+						&::before
+							content: ''
+							display: block
+							width: 22px
+							height: 22px
+							background-image: url('../img/10_footer/t.svg')
+							margin: 7px
+						&::after
+							content: ''
+							display: block
+							width: 22px
+							height: 22px
+							background-image: url('../img/10_footer/t_hover.svg')
+							margin: 7px
+				&:nth-child(4)
+					a
+						margin: 0
+						&::before
+							content: ''
+							display: block
+							width: 19px
+							height: 19px
+							background-image: url('../img/10_footer/gp.svg')
+							margin: 10px
+						&::after
+							content: ''
+							display: block
+							width: 19px
+							height: 19px
+							background-image: url('../img/10_footer/gp_hover.svg')
+							margin: 10px
+.footer_logo_wrapper
+	margin: 50px 0 0 0
+	position: relative
+	.footer_logo
+		display: inline-block
+		position: relative
+		vertical-align: middle
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			width: 1px
+			height: 47px
+			background-color: #fff
+			opacity: 0.2
+			right: -20px
+			top: -2px
+	.copyright
+		display: inline-block
+		padding: 0 0 0 40px
+		vertical-align: middle
+		p
+			color: #ffffff
+			padding: 0
+			margin: 0
+		a
+			color: #ffffff
+			text-decoration: underline
+	.statistic
+		text-align: right
+		img
+			inline-block
+.banner
+    padding: 30px 0 50px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    position: relative
+    h1, h2
+        font-family: $helveticaBold
+        font-size: 40px
+        text-transform: uppercase
+        letter-spacing: 0.05em
+        line-height: 48px
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        width: 20px
+        height: 20px
+        background-image: url(../img/3_portal_slider/round_bottom.svg)
+        bottom: -10px
+        left: 51%
+        z-index: 1
+.centers__banner
+	background-image: url(../img/centers/centers__bg.jpg)
+	h1
+		color: #fff
+.content
+	background-color: #E5E5E5
+	padding: 40px 0
+	overflow-x: hidden
+.main-nav .main-nav__link
+	font-size: 12px
+	font-family: $helveticaBold
+	text-transform: uppercase
+	color: #000
+	position: relative
+	padding: 15px 20px 15px 0
+	display: block
+	transition: all .3s linear
+	margin-bottom: 30px
+	&:hover
+		text-decoration: none
+		opacity: .7
+	&::after
+		position: absolute
+		content: ''
+		width: 280%
+		height: 1px
+		right: 20px
+		bottom: 0
+		background-color: #b5b3b3
+	span
+		position: relative
+		z-index: 2
+	&:nth-child(1)::before
+		position: absolute
+		content: ''
+		width: 280%
+		height: 1px
+		right: 20px
+		top: 0
+		background-color: #b5b3b3
+	&.active
+		color: #fff
+		&::before
+			position: absolute
+			content: ''
+			width: 280%
+			height: 100%
+			background-color: #003560
+			right: 7px
+			top: 0
+			bottom: 0
+		&::after
+			position: absolute
+			content: ''
+			width: 33px
+			height: 32px
+			background-color: #003560
+			right: -9px
+			top: 7px
+			transform: rotate(45deg)
+.btn
+	border-radius: 4px
+	font-size: 13px
+	font-family: $helveticaBold
+	text-transform: uppercase
+	text-align: center
+	padding: 17px 40px
+	color: #fff
+	background-color: #EE414F
+	border: 1px solid #EE414F
+	position: relative
+	letter-spacing: 1.5px
+	box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.16)
+	&:hover
+		color: #fff
+		background-color: #FE636F
+		box-shadow: 0px 12px 22px 3px rgba(0,0,0,0.23)
+		text-decoration: none
+.tabs__list
+	list-style-type: none
+	.centers-tabs
+		&__item
+			text-align: center
+			padding: 70px 10px 10px 10px
+			transition: all .3s linear
+			cursor: pointer
+			&:hover
+				opacity: .7
+			&-ttl
+				// height: 41px
+				color: #525252
+				display: block
+				padding: 12px 30px
+				-webkit-box-shadow: 0 5px 5px rgba(0,59,107,.15)
+				box-shadow: 0 5px 5px rgba(0,59,107,.15)
+				background-color: #fff
+				-webkit-border-radius: 3px
+				border-radius: 3px
+				position: relative
+				z-index: 99
+				text-transform: uppercase
+				font-size: 14px
+				transition: all .3s linear
+				font-family: $gilroyBold
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				width: 64px
+				height: 64px
+				top: 19px
+				background-size: contain
+				background-repeat: no-repeat
+				left: 50%
+				margin: 0 0 0 -32px
+				opacity: 1
+			&:nth-child(1)::before
+				background-image: url(../img/centers/centers__tab-img_1.svg)
+			&:nth-child(2)::before
+				background-image: url(../img/centers/centers__tab-img_2.svg)
+			&:nth-child(3)::before
+				background-image: url(../img/centers/centers__tab-img_3.svg)
+			&:nth-child(4)::before
+				background-image: url(../img/centers/centers__tab-img_4.svg)
+			&:nth-child(5)::before
+				background-image: url(../img/centers/centers__tab-img_6.svg)
+			&:nth-child(6)::before
+				background-image: url(../img/centers/centers__tab-img_5.svg)
+			&:nth-child(7)::before
+				background-image: url(../img/centers/centers__tab-img_2.svg)
+			&:nth-child(8)::before
+				background-image: url(../img/centers/centers__tab-img_3.svg)
+			&.active .centers-list__item-ttl
+				background-color: #EE414F
+				color: #fff
+
+@keyframes first_tab
+	0%
+		transform: rotate(1deg)
+	
+	50%
+		transform: rotate(45deg)
+	
+	100%
+		transform: rotate(90deg)
+		opacity: 0					
+@keyframes second_tab
+	0%
+		transform: rotate(0deg)
+	50%
+		transform: rotate(180deg)
+	100%
+		transform: rotate(360deg)
+@keyframes three_tab
+	0%
+		box-shadow: 0 0 0 0 rgba(198, 58, 58, 0.3)
+	70%
+		box-shadow: 0 0 0 350px rgba(198, 58, 58, 0)
+	100%
+		box-shadow: 0 0 0 0 rgba(198, 58, 58, 0)
+
+@keyframes first_tab_mobile
+	0%
+		transform: rotate(1deg)
+	
+	50%
+		transform: rotate(45deg)
+		opacity: 0
+	75%
+		transform: rotate(70deg)
+		opacity: 0
+	100%
+		transform: rotate(90deg)
+		opacity: 0
+
+@keyframes first_tab_mobile_small
+	0%
+		transform: rotate(1deg)
+	30%
+		transform: rotate(30deg)
+		opacity: 0
+	50%
+		transform: rotate(45deg)
+		opacity: 0
+	75%
+		transform: rotate(70deg)
+		opacity: 0
+	100%
+		transform: rotate(90deg)
+		opacity: 0
+
+@keyframes three_tab_mobile_small
+	0%
+		box-shadow: 0 0 0 0 rgba(198, 58, 58, 0.3)
+	70%
+		box-shadow: 0 0 0 210px rgba(198, 58, 58, 0)
+	100%
+		box-shadow: 0 0 0 0 rgba(198, 58, 58, 0)
+	
+@import "_other_pages/about_project" // Always at the end
+
+@import "media" // Always at the end

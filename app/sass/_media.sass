@@ -1,0 +1,274 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .header_top_line
+        .header_top_line_phone
+            a
+                &::after
+                    right: -20px
+
+    .header_top_line_private_room 
+        text-align: right
+
+    .logo
+        img
+            width: 100%
+
+    .header_middle_line
+        .header_middle_line_feedback
+            a
+                font-size: 11px
+        .menu
+            ul
+                li
+                    width: 182px
+
+    .portal_slider
+        .item_slide
+            min-height: 630px
+        .wrapper_text_blocks
+            .left_block_text, .right_block_text
+                padding: 30px 20px
+                p
+                    font-size: 11px
+            .left_block_registration
+                width: 300px
+                .wrapper_left_block_bottom
+                    p, a
+                        font-size: 11px
+                h2
+                    font-size: 22px
+        
+            .right_block_registration
+                width: 300px
+                h2
+                    font-size: 22px
+                .wrapper_right_block_bottom
+                    p,a 
+                        font-size: 11px
+
+    .wrapper_tabs
+        .tabs
+            .tab
+                font-size: 10px
+                letter-spacing: 0.05em
+
+    .chosen
+        .us_chosen
+            .chosen_item
+                .chosen_title
+                    font-size: 12px
+                    span
+                        font-size: 14px
+    footer 
+        h3
+            font-size: 14px
+            
+    .footer_logo_wrapper
+        .copyright
+            p 
+                font-size: 13px
+            a
+                font-size: 14px
+// ≥992px
++media-breakpoint-down(md)
+    .header_middle_line_feedback
+        margin: 20px 0 0 0
+    .header_middle_line
+        padding: 20px 0
+        .menu
+            ul
+                li
+                    width: 134px
+                    a
+                        font-size: 12px
+
+    .portal_slider
+        .wrapper_text_blocks
+            .left_block_registration
+                width: 210px
+                h2
+                    font-size: 14px
+                form
+                    input[type=text]
+                        font-size: 13px
+                        &:nth-child(1)
+                            margin: 30px 0 0 0
+                            background-position: 10px 13px
+                        &:nth-child(2)
+                            background-position: 10px 11px
+                    input
+                        height: 40px
+                .wrapper_left_block_bottom
+                    text-align: center
+                    justify-content: center
+                    .no_account
+                        &::before
+                            display: none
+            .right_block_registration
+                width: 210px
+                form
+                    input[type=text]
+                        font-size: 13px
+                        &:nth-child(1)
+                            margin: 30px 0 0 0
+                            background-position: 10px 13px
+                        &:nth-child(2)
+                            background-position: 10px 11px
+                    input
+                        height: 40px
+                h2
+                    font-size: 14px
+                .wrapper_right_block_bottom
+                    justify-content: center
+                    text-align: center
+                    .no_account
+                        &::before
+                            display: none
+    
+    .wrapper_tabs
+        .tabs
+            .tab
+                width: 32%
+                font-size: 8px
+
+        .tab_content
+            .tab_item
+                &:nth-child(1)
+                    background-size: 600px
+                    background-position: center 86px
+                    .img_wrapper
+                        img
+                            width: 100%
+                        .dashed
+                            top: -70px
+                            width: 700px
+                            animation: first_tab_mobile 3s infinite linear
+                &:nth-child(2)
+                    background-size: 100%
+                    background-position: center 89px
+                &:nth-child(3)
+                    background-size: 100%
+                    .img_wrapper
+                        .pulser
+                            top: 63%
+
+    .video_guide 
+        img
+            width: 100%
+// ≥768px
++media-breakpoint-down(sm)
+    .search
+        margin: 15px 0 0 0
+
+    .header_middle_line
+        .search
+            input[type=submit]
+                top: 15px
+        .menu
+            ul
+                li
+                    width: 98px
+                    a
+                        font-size: 9px
+
+    .why_use_portal_easy
+        h2
+            font-size: 20px
+    
+    .wrapper_tabs
+        .tabs
+            .tab
+                width: 100%
+                font-size: 10px
+        .tab_content
+            .tab_item
+                padding: 30px 0 0 0
+                &:nth-child(1)
+                    background-size: 435px
+                    background-position: center 99px
+                    .img_wrapper
+                        .dashed
+                            height: 490px
+                            top: -55px
+                            width: auto
+                            animation: first_tab_mobile_small 3s infinite linear
+                &:nth-child(2)
+                    background-size: 435px
+                    .img_wrapper 
+                        img
+                            position: absolute
+                            width: 360px
+                            left: 60px
+                            top: -28px
+                        .dashed
+                            width: 290px
+                            top: -9px
+                            left: 94px
+                            margin: 0
+                &:nth-child(3)
+                    background-size: 435px
+                    background-position: center 90px
+                    .img_wrapper
+                        .pulser
+                            top: 45%
+                            left: 255px
+                            animation: three_tab_mobile_small 3s infinite linear
+    
+    .video_guide,.bottom_feedback, .chosen
+        h2
+            font-size: 20px
+
+    .portal_priorities 
+        h2
+            font-size: 20px
+        .wrapper_priorities_slider
+            .slide_item
+                .table_slide
+                    .text_block
+                        padding: 30px
+                        min-height: 150px
+                        margin: 50px 0 0 0
+                        p
+                            font-size: 14px
+                        a
+                            height: 40px
+                            line-height: 40px
+    
+    .bottom_feedback 
+        form 
+            p
+                font-size: 16px
+                span
+                    font-size: 16px
+            input[type=submit]
+                height: 40px
+
+    .portal_slider
+        .item_slide
+            min-height: 300px
+        .wrapper_text_blocks
+            padding: 20px 0 0 0
+            .center_block_text
+                h1
+                    font-size: 17px
+// ≥576px
++media-breakpoint-down(xs)
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
