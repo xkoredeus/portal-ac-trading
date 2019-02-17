@@ -1158,28 +1158,33 @@ footer
 		text-align: right
 		img
 			inline-block
+.shd
+	box-shadow: 0px 12px 28px -13px rgba(0,0,0,0.64);
+	transition: all 0.3s ease;
+	&:hover
+		box-shadow: 0px 14px 32px -9px rgba(0,0,0,0.69);
 .banner
-    padding: 30px 0 50px
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: 50% 50%
-    position: relative
-    h1, h2
-        font-family: $helveticaBold
-        font-size: 40px
-        text-transform: uppercase
-        letter-spacing: 0.05em
-        line-height: 48px
-    &::before
-        content: ''
-        display: block
-        position: absolute
-        width: 20px
-        height: 20px
-        background-image: url(../img/3_portal_slider/round_bottom.svg)
-        bottom: -10px
-        left: 51%
-        z-index: 1
+	padding: 30px 0 50px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	position: relative
+	h1, h2
+		font-family: $helveticaBold
+		font-size: 40px
+		text-transform: uppercase
+		letter-spacing: 0.05em
+		line-height: 48px
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url(../img/3_portal_slider/round_bottom.svg)
+		bottom: -10px
+		left: 51%
+		z-index: 1
 .centers__banner
 	background-image: url(../img/centers/centers__bg.jpg)
 	h1
@@ -1197,7 +1202,6 @@ footer
 	padding: 15px 20px 15px 0
 	display: block
 	transition: all .3s linear
-	margin-bottom: 30px
 	&:hover
 		text-decoration: none
 		opacity: .7
@@ -1240,6 +1244,81 @@ footer
 			right: -9px
 			top: 7px
 			transform: rotate(45deg)
+.list_circle
+	list-style-type: none
+	li
+		padding-left: 25px
+		position: relative
+		&
+			margin-bottom: 10px
+		&::before
+			content: ''
+			position: absolute
+			width: 8px
+			height: 8px
+			background-color: #EE414F
+			left: 0
+			top: 8px
+			border-radius: 50%
+.input__wrp
+	position: relative
+	border: 1px solid #CCD2D4
+	max-width: 230px
+	border-radius: 4px
+	input,
+	textarea
+		color: #2E2E2E
+		font-family: $helveticaLight
+		font-size: 14px
+		padding: 17px 35px
+		background: none
+		border: 1px solid #CCD2D4
+		border-radius: 4px
+		border: transparent
+		width: 100%
+		resize: none
+		transition: all 0.3s ease
+		overflow: hidden
+		&::placeholder
+			color: #2E2E2E
+	input:focus,
+	textarea:focus
+		box-shadow: inset 0px 0px 0px 1px rgba(238,65,79,1);
+	&::before
+		content: ''
+		position: absolute
+		left: 10px
+		top: 16px
+		width: 16px
+		height: 17px
+		background-position: 50% 50%
+		background-size: contain
+		background-repeat: no-repeat
+	&_mes::before
+		background-image: url(../img/centers/feed__mes.svg)
+	&_req::before
+		background-image: url(../img/centers/feed__req.svg)
+	&_name::before
+		background-image: url(../img/centers/feed__name.svg)
+	&_mail::before
+		background-image: url(../img/centers/feed__mail.svg)
+	&_tel::before
+		background-image: url(../img/centers/feed__tel.svg)
+select
+	border-radius: 4px
+	color: #2E2E2E
+	font-size: 13px
+	padding: 10px 20px
+	background: none
+	border: 1px solid #fff
+	option
+		color: #000
+textarea
+	resize:none
+input:active,
+textarea:active
+	box-shadow: none
+	outline: none
 .btn
 	border-radius: 4px
 	font-size: 13px
@@ -1253,11 +1332,14 @@ footer
 	position: relative
 	letter-spacing: 1.5px
 	box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.16)
+	transition: all 0.3s ease
 	&:hover
 		color: #fff
 		background-color: #FE636F
 		box-shadow: 0px 12px 22px 3px rgba(0,0,0,0.23)
 		text-decoration: none
+.centers-tabs
+	margin-bottom: 60px
 .tabs__list
 	list-style-type: none
 	.centers-tabs
@@ -1312,9 +1394,67 @@ footer
 				background-image: url(../img/centers/centers__tab-img_2.svg)
 			&:nth-child(8)::before
 				background-image: url(../img/centers/centers__tab-img_3.svg)
-			&.active .centers-list__item-ttl
+			&.active .centers-tabs__item-ttl
 				background-color: #EE414F
 				color: #fff
+.centers-list
+	margin-top: 50px
+	&__item
+		padding: 25px
+		border-radius: 6px
+		background-color: #fff
+		&:not(:last-child)
+			margin-bottom: 30px
+		&-top
+			margin-bottom: 20px
+		&-img
+			display: flex
+			align-items: center
+			justify-content: center
+		&-ttl
+			font-family: $helveticaBold
+			text-transform: uppercase
+			font-size: 18px
+			margin-bottom: 10px
+			letter-spacing: 1px
+	.btn
+		padding-left: 10px
+		padding-right: 10px
+.centers-about
+	padding: 20px 30px
+	background-color: rgba(238, 65, 79, 0.10)
+	.section__ttl
+		position: relative
+		padding-left: 130px
+		margin-bottom: 43px
+		&::before
+			content: ''
+			position: absolute
+			width: 126px
+			height: 131px
+			background: url(../img/centers/centers-about__img.png) no-repeat 50% 50% / contain
+			left: -15px
+			top: -46px
+.left-form
+	margin-top: 45px
+	&__in
+		padding: 10px 12px
+		border: 1px solid #CCD2D4
+	p
+		font-size: 14px
+	&__ttl
+		background-color: #CCD2D4
+		padding: 12px 10px
+		text-transform: uppercase
+		font-family: $helveticaBold
+		font-size: 14px
+		span
+			margin-left: 7px
+	.input__wrp
+		margin-bottom: 15px
+		max-width: unset;
+		&::before
+			opacity: .6
 
 @keyframes first_tab
 	0%
