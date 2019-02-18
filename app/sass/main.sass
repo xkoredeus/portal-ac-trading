@@ -1192,7 +1192,17 @@ footer
 .content
 	background-color: #E5E5E5
 	padding: 40px 0
-	overflow-x: hidden
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url(../img/3_portal_slider/round_bottom.svg)
+		bottom: -10px
+		left: 51%
+		z-index: 1
 .main-nav .main-nav__link
 	font-size: 12px
 	font-family: $helveticaBold
@@ -1338,6 +1348,19 @@ textarea:active
 		background-color: #FE636F
 		box-shadow: 0px 12px 22px 3px rgba(0,0,0,0.23)
 		text-decoration: none
+.section_inner
+	padding: 50px 0
+	position: relative
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 20px
+		background-image: url(../img/3_portal_slider/round_bottom.svg)
+		bottom: -10px
+		left: 51%
+		z-index: 1
 .centers-tabs
 	margin-bottom: 60px
 .tabs__list
@@ -1454,6 +1477,121 @@ textarea:active
 		margin-bottom: 15px
 		max-width: unset;
 		&::before
+			opacity: .6
+.clinic__banner
+	position: relative
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+	.container
+		position: relative
+		z-index: 2
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: #fff
+		opacity: .8
+	h1
+		color: #000
+.clinic-info
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+	&__logo
+		display: block
+		margin-bottom: 40px
+	&__map
+		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 6px;
+		overflow: hidden
+.clinic-about
+	h4
+		font-size: 18px
+.clinic-members
+	position: relative
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+	.container
+		position: relative
+		z-index: 2
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: #fff
+		opacity: .8
+	.section__ttl
+		text-align: center
+		margin-bottom: 25px
+	&__item
+		min-height: 300px
+		border-radius: 6px;
+		background-color: #fff
+		overflow: hidden
+		display: flex
+		width: 100%
+		height: 100%
+	&__img
+		width: 36%
+		height: 102%
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+	&__info
+		width: 64%
+		background-color: #fff
+		padding: 25px 25px 35px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		&-ttl
+			font-size: 22px
+			font-family: $helveticaBold
+			color: #525252
+			text-transform: uppercase
+			margin-bottom: 15px
+		p
+			margin-bottom: 25px
+.clinic-reviews
+	.section__ttl
+		text-align: center
+		margin-bottom: 25px
+	&__top
+		margin-bottom: 30px
+	&__rating_num
+		font-family: $helveticaBold
+	&__rating-wrp
+		width: 100%
+		height: 14px
+		background-color: #e3e3e3
+		border-radius: 16px
+		position: relative
+	&__rating
+		position: absolute
+		left: 0
+		top: 0
+		background-color: $red
+		height: 100%
+		border-radius: 16px
+	.write-review
+		text-align: center
+		color: #000
+		text-transform: uppercase
+		text-decoration: underline
+		font-family: $helveticaBold
+		font-size: 14px
+		transition: .3s all ease;
+		&:hover
 			opacity: .6
 
 @keyframes first_tab
