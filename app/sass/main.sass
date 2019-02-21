@@ -1270,6 +1270,8 @@ footer
 			left: 0
 			top: 8px
 			border-radius: 50%
+.tabs__list
+	list-style-type: none
 .input__wrp
 	position: relative
 	border: 1px solid #CCD2D4
@@ -1314,15 +1316,31 @@ footer
 		background-image: url(../img/centers/feed__mail.svg)
 	&_tel::before
 		background-image: url(../img/centers/feed__tel.svg)
-select
-	border-radius: 4px
-	color: #2E2E2E
-	font-size: 13px
-	padding: 10px 20px
-	background: none
-	border: 1px solid #fff
-	option
-		color: #000
+.input__wrp_select
+	max-width: unset
+	width: 100%
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		width: 13px
+		height: 6.5px;
+		background: url(../img/centers/select__arrow.png) no-repeat 50% 50% / contain;
+		right: 9px
+		top: 48%
+	select
+		width: 100%
+		max-width: unset
+		appearance: none
+		border-radius: 4px
+		color: #2E2E2E
+		font-size: 13px
+		padding: 10px 20px
+		background: none
+		border: 1px solid #fff
+		option
+			color: #000
+	
 textarea
 	resize:none
 input:active,
@@ -1962,14 +1980,211 @@ textarea:active
 		font-family: $helveticaBold
 		margin-bottom: 4px
 
+.board__banner
+	color: #fff
+.board-filter
+	padding: 40px 0
+	font-size: 14px
+	select,
+	input[type="tel"],
+	input[type="text"],
+	input[type="number"]
+		background-color: #fff
+	&__ttl
+		font-family: $helveticaBold
+		text-transform: uppercase
+		font-size: 18px
+		margin-top: 15px
+		margin-bottom: 30px
+	&__item
+		margin-bottom: 15px
+		.input__wrp_mes
+			max-width: unset
+		.input__wrp_budget
+			max-width: 120px
+			input
+				text-align: right
+				padding: 11px 14px
+		.btn
+			padding-top: 11px
+			padding-bottom: 11px
+			cursor: pointer
+	&__item-btn_small
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 45px
+		height: 42px
+		background-color: $red
+		border-radius: 6px
+		color: #fff
+		margin-left: 7px
+		cursor: pointer
+		transition: .3s all ease
+		border: 1px solid transparent
+		&:hover
+			opacity: .7
+	&__item-plus
+		width: 50px
+	&__item-reset
+		background-color: #fff
+		border-color: $red
+	.checkbox
+		width: 100%
 
 
+.board-results
+	padding: 40px 0
+	.section__ttl
+		margin-bottom: 30px
+	.tabs__list
+		margin-bottom: 30px
+		li
+			padding: 11px 18px
+			text-align: center
+			cursor: pointer
+			border-radius: 6px;
+			transition: .3s all ease
+			&::before
+				position: absolute
+				content: ''
+				width: 10px
+				height: 10px
+				bottom: -5px
+				transform: rotate(45deg)
+				left: 50%
+				background-color: transparent
+				margin-left: -5px
+		a
+			font-size: 14px
+			font-family: $helveticaBold
+			text-transform: uppercase
+			color: #000
+			padding: 11px 18px
+			text-align: center
+			border-radius: 6px;
+			transition: .3s all ease
+			border: 1px solid $red
+			text-decoration: none
+			&:hover
+				background-color: $red
+				color: #fff
+		li.active
+			background-color: $red
+			color: #fff
+			position: relative
+			&::before
+				
+				background-color: $red
+	.board__item
+		color: #000
+		display: block
+		background-color: #fff
+		border-radius: 6px
+		padding: 20px 30px 25px
+		margin-bottom: 25px
+		text-decoration: none
+		&-top
+			margin-bottom: 20px
+		&-ttl
+			font-size: 20px
+			font-family: $helveticaBold
+			color: #525252
+			text-transform: uppercase
+		&-price
+			font-family: $helveticaBold
+			font-size: 16px
+			margin-left: auto
+			color: #002C4F
+		&-mark
+			padding: 11px 15px 11px 40px
+			position: relative
+			font-size: 14px
+			text-transform: uppercase
+			letter-spacing: 1.3px
+			color: #fff
+			font-family: $helveticaBold
+			text-align: center
+			margin-right: 25px
+			span
+				position: relative
+				z-index: 2
+			&::before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 160%
+				top: -20px
+				bottom: 0
+				left: 0
+				right: 0
+				background-color: $red
+				border-bottom-right-radius: 6px
+				border-bottom-left-radius: 6px
+			&::after
+				position: absolute
+				content: ''
+				width: 23px
+				height: 23px
+				bottom: 10px
+				left: 10px
+				background: url(../img/centers/board__item-mark.png) no-repeat 50% 50% / contain
+		p
+			font-weight: 400
+			margin-bottom: 30px
+		&-info
+			display: flex
+			align-items: center
+			img
+				margin-right: 8px
 
-
-
-
-
-
+.checkbox
+	min-width: 200px
+	cursor: pointer
+	input[type="checkbox"]
+		position: absolute
+		z-index: 1
+		opacity: 0
+		width: 100%
+		height: 30px
+		cursor: pointer
+	.checkbox__text
+		font-size: 14px
+		position: relative
+		padding: 4px 0 0 40px
+		cursor: pointer
+		width: 100%
+		height: 30px
+		display: block
+		&::before
+			content: ''
+			position: absolute
+			top: 0px
+			left: -2px
+			width: 30px
+			height: 30px
+			border-radius: 4px
+			border: 1px solid #c3c2c2
+			background: #E1E1E1
+		&::after
+			content: ''
+			position: absolute
+			top: 7px
+			left: 3px
+			width: 20px
+			height: 16px
+			background: url(../img/centers/checkbox__gal.png) no-repeat 50% 50% / contain
+			opacity: 0;
+			transform: scale(0)
+			transition: 0.2s
+	input[type="checkbox"]:checked + .checkbox__text:after
+		opacity: 1
+		transform: scale(1)
+	input[type="checkbox"]:checked + .checkbox__text:before
+		// background-color: #fff
+		// border: 1px solid #39B54A
+	input[type="checkbox"]:focus + .checkbox__text:before
+		// box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 0 0 1px rgba(49, 179, 237, 0.61)
 
 @keyframes first_tab
 	0%

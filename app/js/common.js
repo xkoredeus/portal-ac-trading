@@ -83,6 +83,19 @@ if(faqAccordeonButton) {
   }
 }
 
+//tabs
+$(".tab-content__item").hide();
+$(".tabs__container div.tab-content__item:first-child").show();
+$('ul.tabs__list > li').click(function () {
+    if (!($(this).hasClass('active'))) {
+        var thisLi = $(this);
+        var numLi = thisLi.index();
+        thisLi.addClass('active').siblings().removeClass('active');
+        thisLi.parent().next().children('div').hide().eq(numLi).fadeIn('slow');
+    }
+});
+
+
 function openItem() {
   this.parentNode.classList.toggle('active-accordeon');
   this.classList.toggle('active-accordeon-title');
