@@ -23,6 +23,8 @@ body
 ul
 	margin: 0
 	padding: 0
+a
+	transition: .3s all ease
 .header_top_line
 	background-color: #2E2E2E
 	height: 40px
@@ -1353,7 +1355,7 @@ textarea:active
 	font-family: $helveticaBold
 	text-transform: uppercase
 	text-align: center
-	padding: 15px 18px
+	padding: 12px 18px
 	color: #fff
 	background-color: #EE414F
 	border: 1px solid #EE414F
@@ -2040,6 +2042,7 @@ textarea:active
 	.tabs__list
 		margin-bottom: 30px
 		li
+			background-color: #fff
 			padding: 11px 18px
 			text-align: center
 			cursor: pointer
@@ -2066,6 +2069,7 @@ textarea:active
 			transition: .3s all ease
 			border: 1px solid $red
 			text-decoration: none
+			background-color: #fff
 			&:hover
 				background-color: $red
 				color: #fff
@@ -2074,7 +2078,6 @@ textarea:active
 			color: #fff
 			position: relative
 			&::before
-				
 				background-color: $red
 	.board__item
 		color: #000
@@ -2174,7 +2177,7 @@ textarea:active
 			width: 20px
 			height: 16px
 			background: url(../img/centers/checkbox__gal.png) no-repeat 50% 50% / contain
-			opacity: 0;
+			opacity: 0
 			transform: scale(0)
 			transition: 0.2s
 	input[type="checkbox"]:checked + .checkbox__text:after
@@ -2185,6 +2188,283 @@ textarea:active
 		// border: 1px solid #39B54A
 	input[type="checkbox"]:focus + .checkbox__text:before
 		// box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 0 0 1px rgba(49, 179, 237, 0.61)
+.cab
+	font-size: 14px
+	
+		
+.cab__banner
+	color: #fff
+	.btn
+		max-width: 370px
+.cab-top
+	margin-bottom: 40px
+	a
+		font-size: 14px
+		color: $red
+		text-decoration: underline
+		transition: .3s all ease
+		&:hover
+			opacity: .7
+	&__item
+		padding: 25px
+		background-color: #fff
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+		border-radius: 6px
+		position: relative
+		overflow: hidden
+		height: 100%
+		&-top
+			padding-right: 108px
+			margin-bottom: 20px
+		&-img
+			position: absolute
+			left: 0
+			top: 0
+			width: 170px
+			height: 102%
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			-webkit-background-size: cover
+			background-size: cover
+		&-name
+			font-size: 16px
+			font-family: $helveticaBold
+			color: #525252
+		&-status
+			position: absolute
+			right: 20px
+			top: 25px
+			padding: 10px
+			font-size: 10px
+			text-transform: uppercase
+			letter-spacing: 1.3px
+			color: #fff
+			font-family: $helveticaBold
+			text-align: center
+			border-radius: 6px
+			&_avail
+				background-color: #71D741
+	.cab-top__item_left
+		padding-left: 185px
+	.cab-feed__buttons
+		margin-bottom: 25px
+		&-item
+			width: 50px
+			height: 50px
+			border: 1px solid $red
+			border-radius: 6px
+			position: relative
+			display: flex
+			justify-content: center
+			animation-iteration-count: 
+			transition: .3s all ease
+			text-decoration: none
+			
+			&::before,
+			&::after
+				position: absolute
+				content: ''
+				top: 12px
+				width: 23px
+				height: 23px
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: contain
+				transition: .3s all ease
+			&::after
+				opacity: .0
+			&:hover
+				background-color: $red
+			&:hover::before
+				opacity: .0
+			&:hover::after
+				opacity: 1
+			&_tel::before
+				background-image: url(../img/centers/cab-feed__buttons-item_tel.png)
+			&_tel::after
+				background-image: url(../img/centers/cab-feed__buttons-item_tel-active.png)
+			&_mail::before
+				background-image: url(../img/centers/cab-feed__buttons-item_mail.png)
+			&_mail::after
+				background-image: url(../img/centers/cab-feed__buttons-item_mail-active.png)
+			&_pas::before
+				background-image: url(../img/centers/cab-feed__buttons-item_pas.png)
+			&_pas::after
+				background-image: url(../img/centers/cab-feed__buttons-item_pas-active.png)
+			&_req::before
+				background-image: url(../img/centers/cab-feed__buttons-item_req.png)
+			&_req::after
+				background-image: url(../img/centers/cab-feed__buttons-item_req-active.png)
+				
+		&-item:not(:last-child)
+			margin-right: 10px
+	&__link
+		font-size: 12px
+		margin-bottom: 10px
+		a
+			font-size: 12px
+		img
+			margin-right: 7px
+		&-value-wrp
+			margin-left: auto
+			font-weight: 500
+		&-value
+			&_good
+				color: #71D741
+			&_bad
+				color: $red
+		&-value:not(:last-child)
+			margin-right: 10px
+	&__link:first-child
+		img
+			margin-left: 2px
+.cab-tabs
+	.tabs__list
+		list-style-type: none
+		li
+			font-size: 12px
+			font-family: $helveticaBold
+			text-transform: uppercase
+			min-width: 200px
+			background-color: rgba(255, 255, 255, 0.34)
+			padding: 15px 25px
+			text-align: center
+			cursor: pointer
+			border-top-left-radius: 6px
+			border-top-right-radius: 6px
+			transition: .3s all ease
+		li:not(:last-child)
+			margin-right: 3px
+		li.active
+			background-color: $red
+			color: #fff
+			position: relative
+	.tabs__container
+		background-color: #fff
+		padding: 30px 25px
+		border-bottom-right-radius: 6px
+		border-bottom-left-radius: 6px
+		.top__info
+			padding-bottom: 25px
+			border-bottom: 1px solid #ccc
+			margin-bottom: 25px
+			&_req
+				.top__info-item
+					margin-right: 15px
+					span:nth-child(2)
+						margin-left: 3px
+						font-weight: 500
+				.btn
+					font-size: 12px
+					padding-top: 11px
+					padding-bottom: 11px
+					margin-top: -10px
+					margin-left: auto
+			&_rev
+				.top__info-item
+					margin-right: 15px
+					span:nth-child(2)
+						margin-left: 3px
+						font-weight: 500
+				.input__wrp_select
+					max-width: 230px
+				.input__wrp_select:not(:last-child)
+					margin-left: auto
+					margin-right: 8px
+			&_info
+				.top__info-item
+					margin-right: 15px
+					margin-bottom: 4px
+					span:nth-child(2)
+						margin-left: 3px
+						font-weight: 500
+		.req__item:not(:last-child)
+			margin-bottom: 30px
+		.req__item
+			&-ttl
+				font-family: $helveticaBold
+				margin-bottom: 20px
+			&-period
+				opacity: .5
+				margin-bottom: 10px
+			&-section
+				a
+					text-decoration: underline
+			&-controls
+				margin-top: 20px
+				a:not(:first-child)
+					text-decoration: underline
+				.btn
+					max-width: 360px
+			&-info
+				display: block
+				font-size: 12px
+				margin-bottom: 15px
+				text-decoration: none
+				
+				img
+					margin-top: -2px
+					margin-right: 4px
+			&-info:nth-child(2)
+				color: #3072A7
+			&-info:nth-child(3)
+				color: #71D741
+		.edit-info
+			text-align: right
+			text-decoration: underline
+			color: #000
+			opacity: .6
+			&:hover
+				opacity: .3
+		.section__ttl
+			font-size: 18px
+			margin-bottom: 15px
+		.info__personal-list 
+			padding-left: 15px
+			li
+				max-width: 320px
+				margin-bottom: 10px
+				a
+					color: #000
+		.top__info
+			&_rating
+				.about__link
+					text-align: right
+					text-decoration: underline
+					color: #000
+					opacity: .6
+					&:hover
+						opacity: .3
+				.flex-column
+					.about__link
+						text-align: left
+						
+				.section__ttl
+					margin-bottom: 20px
+					span:nth-child(2)
+						position: relative
+						padding-left: 30px
+						color: #000
+						opacity: .6
+						font-size: 12px
+						&::before
+							content: ''
+							position: absolute
+							width: 2px
+							height: 100%
+							left: 14px
+							top: 0
+							background-color: #000
+							opacity: .6
+				.top__info-item
+					margin-right: 15px
+					margin-bottom: 7px
+					span:nth-child(2)
+						margin-left: 3px
+						font-weight: 500
+				.rating__point
+					font-family: $helveticaBold
+					color: $red
 
 @keyframes first_tab
 	0%
