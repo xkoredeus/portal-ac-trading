@@ -1214,7 +1214,7 @@ footer
 	padding: 15px 20px 15px 0
 	display: block
 	transition: all .3s linear
-	&:hover
+	&:not(.active):hover
 		text-decoration: none
 		opacity: .7
 	&::after
@@ -1318,6 +1318,8 @@ footer
 		background-image: url(../img/centers/feed__mail.svg)
 	&_tel::before
 		background-image: url(../img/centers/feed__tel.svg)
+	&_pass::before
+		background-image: url(../img/centers/feed__pass.svg)
 .input__wrp_select
 	max-width: unset
 	width: 100%
@@ -1326,7 +1328,7 @@ footer
 		content: ''
 		position: absolute
 		width: 13px
-		height: 6.5px;
+		height: 6.5px
 		background: url(../img/centers/select__arrow.png) no-repeat 50% 50% / contain;
 		right: 9px
 		top: 48%
@@ -2465,6 +2467,112 @@ textarea:active
 				.rating__point
 					font-family: $helveticaBold
 					color: $red
+		.settings-tabs
+			overflow: hidden
+			.section__ttl
+				font-size: 20px
+				margin-bottom: 30px
+			.tabs__list
+				li
+					font-size: 12px
+					font-family: $helveticaBold
+					text-transform: uppercase
+					color: #000
+					position: relative
+					padding: 15px 20px 15px 8px
+					transition: all .3s ease
+					text-align: left
+					color: #000
+					&:not(.active):hover
+						text-decoration: none
+						opacity: .4
+					&::after
+						position: absolute
+						content: ''
+						width: 280%
+						height: 1px
+						right: 20px
+						bottom: 0
+						background-color: #b5b3b3
+					span
+						position: relative
+						z-index: 2
+					&:nth-child(1)::before
+						position: absolute
+						content: ''
+						width: 350px
+						height: 1px
+						right: 20px
+						top: 0
+						background-color: #b5b3b3
+					&.active
+						color: #fff
+						background-color: transparent
+						&::before
+							position: absolute
+							content: ''
+							width: 350px
+							height: 100%
+							background-color: #003560
+							right: 7px
+							top: 0
+							bottom: 0
+						&::after
+							position: absolute
+							content: ''
+							width: 33px
+							height: 32px
+							background-color: #003560
+							right: -9px
+							top: 7px
+							transform: rotate(45deg)
+			.tabs__container
+				padding-top: 0
+				padding-bottom: 0
+				.btn
+					max-width: 210px
+					margin-top: 30px
+				.settings__item:not(:last-child)
+					margin-bottom: 13px
+				.settings__item
+					.input__wrp
+						max-width: 340px
+						input
+							padding-top: 11px
+							padding-bottom: 11px
+						&::before
+							top: 11px
+					.about__link
+						text-align: right
+						text-decoration: underline
+						color: #000
+						opacity: .6
+						&:hover
+							opacity: .3
+					&_pass
+						.about__link
+							margin-left: 10px
+					&_tel
+						margin-top: 25px
+						.input__wrp
+							margin-bottom: 10px
+							max-width: 210px
+					&_code
+						p
+							margin-bottom: 0
+						.input__wrp
+							margin-left: 10px
+							max-width: 100px
+							input
+								text-align: center
+								padding-left: 10px
+								padding-right: 10px
+						.about__link
+							margin-left: 10px
+							color: #3072A7
+
+
+
 
 @keyframes first_tab
 	0%
