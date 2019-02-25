@@ -201,7 +201,7 @@
 			</div>
 			<div class="tabs cab-tabs">
 				<ul class="tabs__list d-flex justify-content-between">
-					<li class="active">Запросы и конкурсы</li>
+					<li class="active">Портфолио</li>
 					<li>Отзывы</li>
 					<li>Информация</li>
 					<li>Рейтинг</li>
@@ -209,61 +209,31 @@
 				</ul>
 				<div class="tabs__container">
 					<!-- Item -->
-					<div class="tab-content__item">
-						<div class="top__info top__info_req d-flex align-items-center">
-							<div class="top__info-item">
-								<span>Все:</span>
-								<span>0</span>
+					<div class="tab-content__item tab-content__item_port">
+						<div class="row">
+							<div class="col-xl-4">
+								<p><b>Специализация:</b></p>
+								<div class="d-flex">
+									<span class="cab-port__tab attr-tab__item col-xl-5 active" data-item="1">Урология</span>
+									<span class="cab-port__tab attr-tab__item col-xl-5" data-item="2">Эндокринология</span>
+								</div>
+								<a href="#" class="edit-info">Настроить портфолио</a>
 							</div>
-							<div class="top__info-item">
-								<span>Запросы:</span>
-								<span>0</span>
+							<div class="col-xl-8">
+								<div class="input__wrp attr-tab-content__item active" data-item="1">
+									<textarea rows="4" cols="30" placeholder="Уточнения к услугам в портфолио:"></textarea>
+								</div>
+								<div class="input__wrp attr-tab-content__item" data-item="2">
+									<textarea rows="4" cols="30" placeholder="Уточнения к услугам 2 в портфолио:"></textarea>
+								</div>
 							</div>
-							<div class="top__info-item">
-								<span>Вакансии:</span>
-								<span>0</span>
-							</div>
-							<a href="#" class="btn">Опубликовать запрос</a>
 						</div>
-						<div class="row req__item">
-							<div class="col-xl-10">
-								<div class="req__item-ttl">
-									Требуется расшифровать снимок брюшной полости на предмет выявления...
-								</div>
-								<p>
-									Разнообразный и богатый опыт новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. С другой стороны дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки форм развития.
-								</p>
-								<p>
-									Повседневная практика показывает, что укрепление и развитие структуры требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки дальнейших направлений развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.
-								</p>
-								<div class="req__item-period">
-									Прошло время с момента публикации: <span>1 день 1 час 23 минуты</span>
-								</div>
-								<div class="req__item-section">
-									<b>Раздел: </b>
-									<a href="#">Урология / Онкология</a>
-								</div>
-								<div class="req__item-controls d-flex justify-content-between align-items-center">
-									<a href="#" class="btn">Получить больше предложений</a>
-									<a href="#">Снять с публикации</a>
-									<a href="#">Редактировать</a>
-									<a href="#">Удалить</a>
-								</div>
-							</div>
-							<div class="col-xl-2">
-								<div class="req__item-info">
-									<img src="img/centers/req__item-info-img_1.png" alt="req__item-info-img_1.png">
-									<span>25 июля 2018 года</span>
-								</div>
-								<a href="#" class="req__item-info">
-									<img src="img/centers/req__item-info-img_2.png" alt="req__item-info-img_2.png">
-									<span>41 предложение</span>
-								</a>
-								<a href="#" class="req__item-info">
-									<img src="img/centers/req__item-info-img_3.png" alt="req__item-info-img_3.png">
-									<span>26 новых сообщений</span>
-								</a>
-							</div>
+						<p class="quick-info">
+							Внимание! Вы отображаетесь в каталоге только по своей специализации. Чтобы увеличить количество специализаций, необходимо перейти на аккаунт PRO
+						</p>
+						<div class="d-flex align-items-center bot__buttons">
+							<a href="#" class="btn">Добавить работу</a>
+							<p>В вашем портфолио сейчас нет ни одной работы</p>
 						</div>
 					</div>
 					<!-- / Item -->
@@ -302,72 +272,109 @@
 							</div>
 							
 						</div>
-						<div class="rev__item">
-							<b>О отзывов от исполнителей за все время</b>
+						<div class="clinic-reviews__item shd row">
+							<div class="col-xl-7">
+								<div class="clinic-reviews__item-top">
+									<div class="clinic-reviews__item-ttl">
+										Никитина Е.А.
+									</div>
+									<div class="clinic-reviews__item-pos">
+										 врач-рентгенолог
+									</div>
+									<div class="clinic-reviews__item-date">
+										30 июня 2018 г
+									</div>
+								</div>
+								<p>
+									Работал с клиникой 1 раз. Отрицательного ничего нет. Оператор оборудования вышел на связь быстро, что ускорило работу.
+								</p>
+							</div>
+							<div class="col-xl-5">
+								<div class="clinic-reviews__item-rating_num">
+									оценка работы: <span>8</span>
+								</div>
+								<div class="clinic-reviews__item-rating_stars-wrp">
+									<div class="clinic-reviews__item-rating_star active"></div>
+									<div class="clinic-reviews__item-rating_star active"></div>
+									<div class="clinic-reviews__item-rating_star active"></div>
+									<div class="clinic-reviews__item-rating_star active"></div>
+									<div class="clinic-reviews__item-rating_star active"></div>
+									<div class="clinic-reviews__item-rating_star active"></div>
+									<div class="clinic-reviews__item-rating_star active"></div>
+									<div class="clinic-reviews__item-rating_star active"></div>
+									<div class="clinic-reviews__item-rating_star"></div>
+									<div class="clinic-reviews__item-rating_star"></div>
+								</div>
+							</div>
+							
 						</div>
+						<!-- / Review item-->
 					</div>
 					<!-- / Item -->
 					<!-- Item -->
-					<div class="tab-content__item">
-						<div class="top__info row">
-							<div class="col-xl-3">
-								<div class="top__info-item">
-									<span>Рейтинг:</span>
-									<span>0</span>
+					<div class="tab-content__item tab-content__item">
+						<p><b>Катков Игорь Иванович</b></p>
+						<p>Рентгенолог</p>
+						<div class="row">
+							<div class="col-xl-4">
+								<div class="info__item">
+									<span>Квалификация:</span>
+									<span>высшая категория</span>
 								</div>
-								<div class="top__info-item">
-									<span>Посещаемость:</span>
-									<span>0</span>
+								<div class="info__item">
+									<span>Ученая степень:</span>
+									<span>доктор медицинских наук</span>
 								</div>
-								<div class="top__info-item">
+								<div class="info__item">
 									<span>На сайте:</span>
 									<span>меньше месяца</span>
 								</div>
-								<div class="top__info-item">
+								<div class="info__item">
+									<span>Опыт работы:</span>
+									<span>27 лет</span>
+								</div>
+								<div class="info__item">
+									<span>Оплата:</span>
+									<span>От 500 руб</span>
+								</div>
+							</div>
+							<div class="col-xl-4">
+								<div class="info__item">
+									<span>Рейтинг:</span>
+									<span>8,2</span>
+								</div>
+								<div class="info__item">
+									<span>Посещаемость:</span>
+									<span>0</span>
+								</div>
+								<div class="info__item">
+									<span>На сайте:</span>
+									<span>меньше месяца</span>
+								</div>
+								<div class="info__item">
 									<span>Дата регистрации:</span>
 									<span>10.01.2019</span>
 								</div>
 							</div>
-							<div class="col-xl-5">
-								<div class="top__info-item">
-									<span>Название компании:</span>
-									<span>Клиника Александрия</span>
+							<div class="col-xl-4">
+								<div class="info__item">
+									<span>Врач работает в клиниках:</span>
+									<span>ООО "Медград"</span>
 								</div>
-								<div class="top__info-item">
+								<div class="info__item">
 									<span>Адрес клиники:</span>
 									<span>ул. Малая Покровская 2а</span>
 								</div>
-								<div class="top__info-item">
+								<div class="info__item">
 									<span>Телефоны: </span>
 									<span><a href="tel:78312162220">+7 (831) 216-22-20</a></span>
 								</div>
 							</div>
-							<div class="offset-xl-3">
-							</div>
-							<div class="col-xl-1">
+							<div class="d-flex col-xl-12 align-items-center bot__buttons">
+								<a href="#" class="btn">Показать контакты</a>
 								<a href="#" class="edit-info">Изменить</a>
 							</div>
 						</div>
-					
-						<h3 class="section__ttl">О клинике</h3>
-						<p>
-							Многопрофильная клинка «Александрия» — это настоящее созвездие высококлассных специалистов, огромный спектр оказываемых услуг и суперсовременное диагностическое оборудование. Центр ведет лечебную деятельность с 2008 года, успешно помогая своим посетителям по самым разнообразным направлениям.Отдельного внимания заслуживают врачи клиники: звездный состав представлен известными специалистами, имеющими высшие квалификационные категории, ученые степени докторов и кандидатов медицинских наук. Многие врачи успешно совмещают работу в клинике с научной деятельностью, являясь профессорами и доцентами НижГМА. «Александрия» осуществляет прием пациентов по следующим направлениям: стоматология; отоларингология; аллергология; педиатрия; акушерство и гинекология; терапия; урология и андрология; диетология; гастроэнтерология; кардиология; физиотерапия; косметология; гистероскопия. Кроме того, центр оснащен собственной лабораторией, проводящей все виды исследований, а также оборудованием для УЗ-диагностирования.
-						</p>
-						<h4>Оборудование клиники</h4>
-						<ul class="list_circle">
-							<li>Аппарат УЗИ диагностики Chisom EcoExpert</li>
-							<li>МРТ аппарат Phullips</li>
-							<li>КТ аппарат GE</li>
-						</ul>
-						<h4>Представители клиники:</h4>
-						<ol class="info__personal-list">
-							<li><a href="#">
-								Каткова Анжелика Иванона рентгенлаборант врач высшей категории, доктор медицинских услуг, опыт 25 лет
-							</a></li>
-							<li><a href="#">
-								Каткова Анжелика Иванона рентгенлаборант врач высшей категории, доктор медицинских услуг, опыт 25 лет
-							</a></li>
-						</ol>
 					</div>
 					<!-- / Item -->
 					<!-- Item -->
@@ -435,27 +442,23 @@
 									<span>100</span>
 								</div>
 								<div class="top__info-item">
-									<span>Безопасные Сделки:</span>
+									<span>Работы в портфолио:</span>
+									<span>300</span>
+								</div>
+								<div class="top__info-item">
+									<span>Безопасные сделки:</span>
 									<span>∞</span>
 								</div>
 								<div class="top__info-item">
-									<span>Общие опубликованные проекты:</span>
-									<span>∞</span>
-								</div>
-								<div class="top__info-item">
-									<span>Опубликованные платные проекты:</span>
-									<span>∞</span>
-								</div>
-								<div class="top__info-item">
-									<span>Опубликованные конкурсы:</span>
-									<span>∞</span>
-								</div>
-								<div class="top__info-item">
-									<span>Успешно закрытые проекты:</span>
+									<span>Конкурсы:</span>
 									<span>∞</span>
 								</div>
 								<div class="top__info-item">
 									<span>Деньги, потраченные на сервис:</span>
+									<span>∞</span>
+								</div>
+								<div class="top__info-item">
+									<span>Ответы на проекты:</span>
 									<span>∞</span>
 								</div>
 								<div class="top__info-item">
@@ -464,14 +467,16 @@
 								</div>
 							</div>
 							<div class="col-xl-4 row d-flex flex-column justify-content-between">
-								<a href="#" class="about__link">Подробнее о заполнении профиля</a>
+								<a href="#" class="about__link" style="margin-bottom: 20px">Подробнее о заполнении профиля</a>
+
 								<a href="#" class="about__link">Купить</a>
 								<a href="#" class="about__link">Заполнить профиль</a>
-								<a href="#" class="about__link">Опубликовать проект</a>
-								<a href="#" class="about__link">Опубликовать платный проект</a>
-								<a href="#" class="about__link">Опубликовать конкурс</a>
-								<a href="#" class="about__link">Перейти в раздел</a>
-								<a href="#" class="about__link">Мои проекты</a>
+								<a href="#" class="about__link" style="margin-bottom: 20px">Добавить работы</a>
+
+								<a href="#" class="about__link" style="margin-bottom: 20px">Опубликовать конкурс</a>
+
+								<a href="#" class="about__link">Перейти в раздел Работа</a>
+
 								<span class="rating__point">1 балл в день</span>
 							</div>
 								
@@ -483,7 +488,9 @@
 						<div class="settings-tabs row tabs">
 							<ul class="col-xl-4 tabs__list">
 								<li class="active"><span>Основные настройки</span></li>
+								<li><span>Портфолио</span></li>
 								<li><span>Информация</span></li>
+								<li><span>Выбор специализации</span></li>
 								<li><span>Финансы</span></li>
 								<li><span>Фотография</span></li>
 								<li><span>Уведомления</span></li>
@@ -538,6 +545,50 @@
 								</div>
 								<!-- /settings Item -->
 								<!-- settings Item -->
+								<div class="tab-content__item tab-content__item_port">
+									<h4 class="section__ttl">Портфолио</h4>
+
+									<div class="settings__item settings__item_spec d-flex align-items-center">
+										<p><b>Специализация:</b></p>
+										<span class="port-spec__item">Урология</span>
+									</div>
+									<div class="settings__item">
+										<p style="opacity: .6;" class="settings__item-descr">Чтобы увеличить количество специализаций и получить дополнительные возможности, рекомендуем приобрести тариф PROFI</p>
+									</div>
+									<div class="settings__item">
+										<div class="settings__item">
+											<p><b>Выберите разделы, в которых намерены разместить информацию о себе:</b></p>
+										</div>
+										<a href="#" class="btn settings__item">Изменить раздел</a>
+									</div>
+									<div class="settings__item settings__item_price d-flex align-items-center">
+										<p><b>Укажите стоимость работ от:</b></p>
+										<div class="input__wrp">
+											<input type="number" placeholder="100000">
+										</div>
+										<div class="input__wrp input__wrp_select">
+											<select>
+												<option value="">Рублей</option>
+												<option value="">Долларов</option>
+											</select>
+										</div>
+									</div>
+									<p class="settings__item-descr">Данные цены будут выводиться на вашей странице и в общем каталоге</p>
+									<label for="port__checkbox_1" class="checkbox settings__item" checked>
+										<input type="checkbox" id="port__checkbox_1" name="">
+										<span class="checkbox__text">
+											Готов к работе с пакетом заявок
+										</span>
+									</label>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<textarea rows="4" cols="30" placeholder="Уточнения к услугам в портфолио: Опишите особенности сотрудничества с вами. Конактные данные укажите в разделе Информация"></textarea>
+										</div>
+									</div>
+
+									<a href="#" class="btn settings__item">Сохранить</a>
+								</div>
+								<!-- settings Item -->
 								<div class="tab-content__item tab-content__item_info">
 									<h4 class="section__ttl">Информация</h4>
 
@@ -563,14 +614,14 @@
 											</span>
 										</label>
 									</div>
-									<div class="settings__item settings__item">
+									<div class="settings__item">
 										<div class="input__wrp input__wrp_select">
 											<select name="">
 												<option value="Все специализации">Страна</option>
 											</select>
 										</div>
 									</div>
-									<div class="settings__item settings__item">
+									<div class="settings__item">
 										<div class="input__wrp input__wrp_select">
 											<select name="">
 												<option value="Все специализации">Город</option>
@@ -588,65 +639,81 @@
 										</div>
 									</div>
 									<div class="settings__item">
-										<p><b>Представитель 1</b></p>
-										<div class="settings__item">
-											<div class="input__wrp">
-												<input type="text" placeholder="ФИО">
-											</div>
-										</div>
-										<div class="settings__item">
-											<div class="input__wrp">
-												<input type="text" placeholder="Должность">
-											</div>
-										</div>
-										<div class="settings__item">
-											<div class="input__wrp">
-												<input type="text" placeholder="Опыт работы">
-											</div>
+										<div class="input__wrp">
+											<input type="text" placeholder="Должность">
 										</div>
 									</div>
-
-									<div class="settings__item settings__item_upload d-flex align-items-center">
-										<p><b>Загрузить фото:</b></p>
-										<div class="upload__file-wrp">
-											<input type="file" name="" id="upload__file_1" class="upload__file" placeholder="Выберите файл">
-											<label for="upload__file_1" class="filename">Выберите файл</label>
-										</div>
-										<div class="upload__file-status">Файл не выбран</div>
-									</div>
-									<a href="#" class="btn info__add">Добавить представителя</a>
 									<div class="settings__item">
-										<div class="settings__item">
-											<div class="input__wrp">
-												<input type="text" placeholder="Сайт">
-											</div>
-										</div>
-										<div class="settings__item">
-											<div class="input__wrp">
-												<input type="tel" placeholder="+7 (___) ___-__-__">
-											</div>
-										</div>
-										<div class="settings__item">
-											<div class="input__wrp">
-												<input type="text" placeholder="Skype">
-											</div>
-										</div>
-										<div class="settings__item">
-											<div class="input__wrp">
-												<input type="text" placeholder="Viber">
-											</div>
-										</div>
-										<div class="settings__item">
-											<div class="input__wrp">
-												<input type="text" placeholder="Whatsapp">
-											</div>
+										<div class="input__wrp">
+											<input type="text" placeholder="Квалификация">
 										</div>
 									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Ученая степень">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Стаж работы в годах">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Специализация">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Образование (название учебного заведения, год окончания)">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Курсы повышения квалификации">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Публикации">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Опыт работы">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Сайт">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="tel" placeholder="+7 (___) ___-__-__">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Skype">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Viber">
+										</div>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Whatsapp">
+										</div>
+									</div>
+									
 									<div class="settings__item">
 										<p><b>Дополнительная информация:</b></p>
 									</div>
 									<div class="settings__item settings__item_upload d-flex align-items-center">
-										<p><b>Загрузить логотип:</b></p>
+										<p><b>Загрузить резюме:</b></p>
 										<div class="upload__file-wrp">
 											<input type="file" name="" id="upload__file_1" class="upload__file" placeholder="Выберите файл">
 											<label for="upload__file_1" class="filename">Выберите файл</label>
@@ -654,12 +721,81 @@
 										<div class="upload__file-status">Файл не выбран</div>
 									</div>
 									<div class="settings__item">
-										<p class="settings__item-descr">Условия загрузки: Не более 50 Кб, размер 150x100 пикселей gif, jpg, jpeg, png</p>
+										<p class="settings__item-descr">Максимальный размер файла: 5 Мб. Файлы следующих форматов запрещены к загрузке: ade, adp, bat, chm, cmd, com, cpl, exe, hta, ins, isp, jse, lib, mde, msc, msp, mst, pif, scr, sct, shb, sys, vb, vbe, vbs, vxd, wsc, wsf, wsh</p>
 									</div>
 									<div class="settings__item">
 										<div class="input__wrp">
-											<textarea rows="4" cols="30" placeholder="О компании: Максимум 500 знаков"></textarea>
+											<textarea rows="4" cols="30" placeholder="О себе: Максимум 500 знаков"></textarea>
 										</div>
+									</div>
+										
+
+									<a href="#" class="btn settings__item">Сохранить</a>
+								</div>
+								<!-- /settings Item -->
+								<!-- settings Item -->
+								<div class="tab-content__item">
+									<h4 class="section__ttl">Выберите вашу специализацию:</h4>
+									<div class="settings__item">
+										<p class="settings__item-descr">
+											Присылать по электронной почте следующие уведомления:
+										</p>
+									</div>
+									<div class="row">
+										<label for="spec__checkbox_1" class="checkbox settings__item col-xl-4" checked>
+											<input type="checkbox" id="spec__checkbox_1" name="">
+											<span class="checkbox__text">
+												Урология
+											</span>
+										</label>
+										<label for="spec__checkbox_2" class="checkbox settings__item col-xl-4">
+											<input type="checkbox" id="spec__checkbox_2" name="">
+											<span class="checkbox__text">
+												Гинекология
+											</span>
+										</label>
+										<label for="spec__checkbox_3" class="checkbox settings__item col-xl-4">
+											<input type="checkbox" id="spec__checkbox_3" name="">
+											<span class="checkbox__text">
+												Эндокринология
+											</span>
+										</label>
+										<label for="spec__checkbox_1" class="checkbox settings__item col-xl-4" >
+											<input type="checkbox" id="spec__checkbox_1" name="">
+											<span class="checkbox__text">
+												Урология
+											</span>
+										</label>
+										<label for="spec__checkbox_2" class="checkbox settings__item col-xl-4">
+											<input type="checkbox" id="spec__checkbox_2" name="">
+											<span class="checkbox__text">
+												Гинекология
+											</span>
+										</label>
+										<label for="spec__checkbox_3" class="checkbox settings__item col-xl-4">
+											<input type="checkbox" id="spec__checkbox_3" checked name="">
+											<span class="checkbox__text">
+												Эндокринология
+											</span>
+										</label>
+										<label for="spec__checkbox_1" class="checkbox settings__item col-xl-4" checked>
+											<input type="checkbox" id="spec__checkbox_1" name="">
+											<span class="checkbox__text">
+												Урология
+											</span>
+										</label>
+										<label for="spec__checkbox_2" class="checkbox settings__item col-xl-4">
+											<input type="checkbox" id="spec__checkbox_2" name="">
+											<span class="checkbox__text">
+												Гинекология
+											</span>
+										</label>
+										<label for="spec__checkbox_3" class="checkbox settings__item col-xl-4">
+											<input type="checkbox" id="spec__checkbox_3" checked name="">
+											<span class="checkbox__text">
+												Эндокринология
+											</span>
+										</label>
 									</div>
 										
 
@@ -763,7 +899,45 @@
 										</div>
 										<p>Например: 127287, Россия, г. Москва, ул. 2-я Хуторская д 38А стр.9</p>
 									</div>
-										
+
+									<div class="settings__item settings__item_passport">
+										<p class="settings__item-descr"><b>Данные о физическом лице</b></p>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="ИНН">
+										</div>
+										<p>Например: 123456789000</p>
+									</div>
+
+									<div class="settings__item settings__item_passport">
+										<p class="settings__item-descr"><b>Платежные реквизиты</b></p>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Яндекс.Деньги">
+										</div>
+										<p>Например: 4100123456789</p>
+									</div>
+									<div class="settings__item">
+										<div class="input__wrp">
+											<input type="text" placeholder="Номер карты VISA/MC">
+										</div>
+										<p>Например: 1234567890123456</p>
+									</div>
+									<div class="settings__item settings__item_passport">
+										<p class="settings__item-descr"><b>Скан-копии страниц паспорта</b></p>
+									</div>
+									<div class="settings__item d-flex align-items-center">
+										<div class="upload__file-wrp">
+											<input type="file" name="" multiple id="upload__photo_1" class="upload__file" placeholder="Выберите файлы">
+											<label for="upload__photo_1" class="filename">Выберите файлы</label>
+										</div>
+										<div class="upload__file-status">Файлы не выбраны</div>
+									</div>
+									<div class="settings__item">
+										<p style="font-size: 12px">Необходимы начальная страница с основными данными и страница с данными о адресе регистрации (если регистрация предусмотрена законодательством вашей страны). Cканы (или фото) должны быть: цветные; цельные (без срезов/ перекрытий по краям/низу/верху); с четко читаемыми данными</p>
+									</div>
 
 									<a href="#" class="btn settings__item">Сохранить</a>
 								</div>
