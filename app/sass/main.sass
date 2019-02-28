@@ -1537,17 +1537,49 @@ textarea:active
 	h1
 		color: #000
 .clinic-info
-	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
 	&__logo
 		display: block
 		margin-bottom: 40px
 	&__map
-		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-		border-radius: 6px;
-		overflow: hidden
+		margin-bottom: 40px
+		img
+			box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1)
+			border-radius: 6px
+			margin-bottom: 15px
+	&__btn:first-child
+		margin-right: 10px
+	.cab-feed__buttons
+		margin-top: 20px
 .clinic-about
 	h4
 		font-size: 18px
+	.tabs
+		position: relative
+		.tabs__list
+			display: flex
+			list-style-type: none
+			margin-bottom: 25px
+			li
+				font-size: 18px
+				font-family: $helveticaBold
+				position: relative
+				cursor: pointer
+				transition: .3s all ease
+				&:not(.active):hover
+					opacity: .7
+				&:not(:last-child)
+					margin-right: 15px
+				&:not(.active)::before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 1px
+					border-bottom: 1px dashed #000
+					bottom: 0
+					left: 0
+			li.active
+				color: $red
 .clinic-members
 	position: relative
 	background-position: 50% 50%
@@ -1778,10 +1810,10 @@ textarea:active
 			font-size: 16px
 			margin-bottom: 8px
 		&-reviews
-			margin-top: 8px
 			display: block
 			color: #000
 			text-decoration: underline
+			margin-bottom: 15px
 			&:hover
 				color: #000
 				transition: .5s all ease
@@ -1849,6 +1881,12 @@ textarea:active
 		opacity: .6
 	h1
 		color: #000
+.doc__top
+	.cab-feed__buttons
+		position: absolute
+		left: 10px
+		bottom: 10px
+		margin-bottom: 0
 .doc
 	&__item
 		background-color: #fff
@@ -1866,7 +1904,6 @@ textarea:active
 			height: 102%
 			background-position: 50% 50%
 			background-repeat: no-repeat
-			-webkit-background-size: cover
 			background-size: cover
 		&-info-wrp
 			padding: 25px 25px 25px 280px
@@ -1877,6 +1914,7 @@ textarea:active
 			color: #525252
 			text-transform: uppercase
 			margin-bottom: 12px
+
 		p
 			margin-bottom: 6px
 		&-descr
@@ -1911,10 +1949,6 @@ textarea:active
 			margin-right: 8px
 		&-contacts
 			margin-top: 25px
-			span:nth-child(1)
-				color: #EE414F
-				font-weight: 600
-				margin-right: 25px
 			span:nth-child(3)
 				font-size: 16px
 				a
@@ -1924,6 +1958,23 @@ textarea:active
 					&:hover
 						opacity: .6
 						text-decoration: none
+		&-price
+			color: #EE414F
+			font-weight: 600
+			margin-right: 25px
+		&-status
+			font-family: $helveticaBold
+			&-icon
+				display: block
+				width: 37px
+				height: 37px
+				margin-right: 5px
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: contain
+				&_free
+					background-image: url(../img/centers/doc__status_free.png)
+					
 		&-mes
 			display: inline-block
 			margin-right: 25px
@@ -2326,58 +2377,58 @@ textarea:active
 					background-color: #000
 	.cab-top__item_left
 		padding-left: 185px
-	.cab-feed__buttons
-		margin-bottom: 25px
-		&-item
-			width: 50px
-			height: 50px
-			border: 1px solid $red
-			border-radius: 6px
-			position: relative
-			display: flex
-			justify-content: center
-			animation-iteration-count: 
+.cab-feed__buttons
+	margin-bottom: 25px
+	&-item
+		width: 50px
+		height: 50px
+		border: 1px solid $red
+		border-radius: 6px
+		position: relative
+		display: flex
+		justify-content: center
+		animation-iteration-count: 
+		transition: .3s all ease
+		text-decoration: none
+		
+		&::before,
+		&::after
+			position: absolute
+			content: ''
+			top: 12px
+			width: 23px
+			height: 23px
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: contain
 			transition: .3s all ease
-			text-decoration: none
+		&::after
+			opacity: .0
+		&:hover
+			background-color: $red
+		&:hover::before
+			opacity: .0
+		&:hover::after
+			opacity: 1
+		&_tel::before
+			background-image: url(../img/centers/cab-feed__buttons-item_tel.png)
+		&_tel::after
+			background-image: url(../img/centers/cab-feed__buttons-item_tel-active.png)
+		&_mail::before
+			background-image: url(../img/centers/cab-feed__buttons-item_mail.png)
+		&_mail::after
+			background-image: url(../img/centers/cab-feed__buttons-item_mail-active.png)
+		&_pas::before
+			background-image: url(../img/centers/cab-feed__buttons-item_pas.png)
+		&_pas::after
+			background-image: url(../img/centers/cab-feed__buttons-item_pas-active.png)
+		&_req::before
+			background-image: url(../img/centers/cab-feed__buttons-item_req.png)
+		&_req::after
+			background-image: url(../img/centers/cab-feed__buttons-item_req-active.png)
 			
-			&::before,
-			&::after
-				position: absolute
-				content: ''
-				top: 12px
-				width: 23px
-				height: 23px
-				background-position: 50% 50%
-				background-repeat: no-repeat
-				background-size: contain
-				transition: .3s all ease
-			&::after
-				opacity: .0
-			&:hover
-				background-color: $red
-			&:hover::before
-				opacity: .0
-			&:hover::after
-				opacity: 1
-			&_tel::before
-				background-image: url(../img/centers/cab-feed__buttons-item_tel.png)
-			&_tel::after
-				background-image: url(../img/centers/cab-feed__buttons-item_tel-active.png)
-			&_mail::before
-				background-image: url(../img/centers/cab-feed__buttons-item_mail.png)
-			&_mail::after
-				background-image: url(../img/centers/cab-feed__buttons-item_mail-active.png)
-			&_pas::before
-				background-image: url(../img/centers/cab-feed__buttons-item_pas.png)
-			&_pas::after
-				background-image: url(../img/centers/cab-feed__buttons-item_pas-active.png)
-			&_req::before
-				background-image: url(../img/centers/cab-feed__buttons-item_req.png)
-			&_req::after
-				background-image: url(../img/centers/cab-feed__buttons-item_req-active.png)
-				
-		&-item:not(:last-child)
-			margin-right: 10px
+	&-item:not(:last-child)
+		margin-right: 10px
 	&__link
 		font-size: 12px
 		margin-bottom: 10px
